@@ -336,72 +336,311 @@
             </div>
             
             <div class="card">
-                <h3>Reacción en Cadena por Radicales Libres</h3>
-                <p><strong>Mecanismo detallado de la cloración del metano:</strong></p>
+    <h3><i class="fas fa-link"></i> Reacción en Cadena por Radicales Libres</h3>
     
-                <div class="code-block" style="background: #2d3a4b; color: #e2e8f0; padding: 25px; border-radius: 8px; font-family: 'Courier New', monospace; margin: 20px 0; line-height: 1.8;">
-        <span style="color: #ff9999; font-weight: bold;">// PASO 1: INICIACIÓN (Requiere luz o calor)</span>
-        Cl₂ + hν  →  2 Cl•
-        <span style="color: #66ff66; display: block; margin-top: 10px;">// Se rompe el enlace Cl-Cl homolíticamente</span>
-        <span style="color: #66ff66;">// Se generan dos radicales cloro</span>
-        
-        <hr style="border-color: #555; margin: 20px 0;">
-        
-        <span style="color: #ff9999; font-weight: bold;">// PASO 2: PROPAGACIÓN (ciclo que se repite)</span>
-                    
-        <span style="color: #ffcc66;">// Ciclo A: Formación de HCl</span>
-        Cl• + CH₄  →  •CH₃ + HCl
-                    
-        <span style="color: #66ff66;">// El radical Cl abstrae un H del metano</span>
-        <span style="color: #66ff66;">// Se forma HCl y se genera radical metilo</span>
-        
-        <span style="color: #ffcc66; display: block; margin-top: 15px;">// Ciclo B: Formación de CH₃Cl</span>
-        •CH₃ + Cl₂  →  CH₃Cl + Cl•
-        <span style="color: #66ff66;">// El radical metilo ataca Cl₂</span>
-        <span style="color: #66ff66;">// Se forma CH₃Cl y se regenera Cl•</span>
-        
-        <span style="color: #66ff66; display: block; margin-top: 10px; font-style: italic;">
-        // NOTA: El Cl• regenerado vuelve al Ciclo A
-        // Un solo fotón inicia miles de ciclos
-        </span>
-        
-        <hr style="border-color: #555; margin: 20px 0;">
-        
-        <span style="color: #ff9999; font-weight: bold;">// PASO 3: TERMINACIÓN (detiene la cadena)</span>
-                    
-        <span style="color: #ffcc66;">// Opción 1: Combinación de radicales</span>
-        Cl• + Cl•  →  Cl₂
-        •CH₃ + •CH₃  →  CH₃-CH₃
-        Cl• + •CH₃  →  CH₃Cl
-        
-        <span style="color: #ffcc66; display: block; margin-top: 15px;">// Opción 2: Reacción con paredes del recipiente</span>
-        Cl• + pared  →  inactivación
-        •CH₃ + pared  →  inactivación
-    </div>
-    
-    <div style="background: #1a1f2e; padding: 15px; border-radius: 5px; margin-top: 20px;">
-        <h4 style="color: #ffcc66; margin-top: 0;">📊 Resumen del Mecanismo:</h4>
-        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
-            <div style="flex: 1; min-width: 200px; background: #2a2f40; padding: 10px; border-radius: 5px;">
-                <strong style="color: #ff9999;">INICIACIÓN</strong><br>
-                • Genera radicales<br>
-                • Requiere energía<br>
-                • Ocurre una vez
+    <div class="mechanism-steps">
+        <!-- PASO 1: INICIACIÓN -->
+        <div class="step initiation">
+            <div class="step-header">
+                <span class="step-number">1</span>
+                <h4>INICIACIÓN</h4>
+                <span class="step-requirement"><i class="fas fa-sun"></i> Requiere luz/calor</span>
             </div>
-            <div style="flex: 1; min-width: 200px; background: #2a2f40; padding: 10px; border-radius: 5px;">
-                <strong style="color: #66ff66;">PROPAGACIÓN</strong><br>
-                • Forma productos<br>
-                • Regenera radicales<br>
-                • Ocurre miles de veces
+            <div class="step-content">
+                <div class="chemical-equation">
+                    <span class="molecule">Cl<sub>2</sub></span>
+                    <span class="plus"> + </span>
+                    <span class="energy">hν</span>
+                    <span class="arrow"> → </span>
+                    <span class="radical">2 Cl•</span>
+                </div>
+                <p class="step-description">
+                    <i class="fas fa-info-circle"></i> Ruptura homolítica del enlace Cl-Cl. 
+                    Se absorbe un fotón y se generan dos radicales cloro.
+                </p>
+                <div class="step-image">
+                    <img src="ruta/a/tu-imagen1.png" alt="Iniciación: ruptura de Cl₂ con luz" style="max-width: 100%; height: auto; border-radius: 5px;">
+                    <div class="image-placeholder">
+                        <i class="fas fa-lightbulb" style="color: #FFD700; font-size: 2em;"></i>
+                        <p>Imagen: Luz ultravioleta rompiendo molécula de Cl<sub>2</sub></p>
+                    </div>
+                </div>
             </div>
-            <div style="flex: 1; min-width: 200px; background: #2a2f40; padding: 10px; border-radius: 5px;">
-                <strong style="color: #ffcc66;">TERMINACIÓN</strong><br>
-                • Elimina radicales<br>
-                • Detiene la cadena<br>
-                • Reduce rendimiento
+        </div>
+        
+        <!-- PASO 2: PROPAGACIÓN -->
+        <div class="step propagation">
+            <div class="step-header">
+                <span class="step-number">2</span>
+                <h4>PROPAGACIÓN</h4>
+                <span class="step-requirement"><i class="fas fa-redo"></i> Ciclo que se repite</span>
+            </div>
+            <div class="step-content">
+                <!-- CICLO A -->
+                <div class="propagation-cycle">
+                    <h5><i class="fas fa-arrow-circle-right"></i> Ciclo A: Formación de HCl</h5>
+                    <div class="chemical-equation">
+                        <span class="radical">Cl•</span>
+                        <span class="plus"> + </span>
+                        <span class="molecule">CH<sub>4</sub></span>
+                        <span class="arrow"> → </span>
+                        <span class="radical">•CH<sub>3</sub></span>
+                        <span class="plus"> + </span>
+                        <span class="molecule">HCl</span>
+                    </div>
+                    <p class="step-description">
+                        El radical cloro abstrae un hidrógeno del metano, formando HCl y 
+                        generando un radical metilo.
+                    </p>
+                </div>
+                
+                <!-- CICLO B -->
+                <div class="propagation-cycle">
+                    <h5><i class="fas fa-arrow-circle-right"></i> Ciclo B: Formación de CH<sub>3</sub>Cl</h5>
+                    <div class="chemical-equation">
+                        <span class="radical">•CH<sub>3</sub></span>
+                        <span class="plus"> + </span>
+                        <span class="molecule">Cl<sub>2</sub></span>
+                        <span class="arrow"> → </span>
+                        <span class="molecule">CH<sub>3</sub>Cl</span>
+                        <span class="plus"> + </span>
+                        <span class="radical">Cl•</span>
+                    </div>
+                    <p class="step-description">
+                        El radical metilo ataca una molécula de Cl<sub>2</sub>, formando 
+                        clorometano y regenerando el radical cloro.
+                    </p>
+                </div>
+                
+                <div class="step-image">
+                    <!-- IMAGEN 2: Ciclo de propagación -->
+                    <div class="image-placeholder">
+                        <i class="fas fa-recycle" style="color: #4CAF50; font-size: 2em;"></i>
+                        <p>Imagen: Diagrama del ciclo de propagación</p>
+                    </div>
+                </div>
+                
+                <div class="key-point">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <strong>¡IMPORTANTE!</strong> Un solo fotón inicia miles de ciclos de propagación.
+                    El Cl• regenerado vuelve al Ciclo A, continuando la cadena.
+                </div>
+            </div>
+        </div>
+        
+        <!-- PASO 3: TERMINACIÓN -->
+        <div class="step termination">
+            <div class="step-header">
+                <span class="step-number">3</span>
+                <h4>TERMINACIÓN</h4>
+                <span class="step-requirement"><i class="fas fa-stop-circle"></i> Detiene la cadena</span>
+            </div>
+            <div class="step-content">
+                <div class="termination-options">
+                    <div class="option">
+                        <h5><i class="fas fa-handshake"></i> Combinación de radicales</h5>
+                        <div class="chemical-equation small">
+                            Cl• + Cl• → Cl<sub>2</sub>
+                        </div>
+                        <div class="chemical-equation small">
+                            •CH<sub>3</sub> + •CH<sub>3</sub> → CH<sub>3</sub>-CH<sub>3</sub>
+                        </div>
+                        <div class="chemical-equation small">
+                            Cl• + •CH<sub>3</sub> → CH<sub>3</sub>Cl
+                        </div>
+                    </div>
+                    
+                    <div class="option">
+                        <h5><i class="fas fa-ban"></i> Reacción con paredes</h5>
+                        <div class="chemical-equation small">
+                            Cl• + pared → inactivación
+                        </div>
+                        <div class="chemical-equation small">
+                            •CH<sub>3</sub> + pared → inactivación
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step-image">
+                    <!-- IMAGEN 3: Radicales colisionando -->
+                    <div class="image-placeholder">
+                        <i class="fas fa-times-circle" style="color: #f44336; font-size: 2em;"></i>
+                        <p>Imagen: Radicales combinándose para terminar la cadena</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    
+    <style>
+        .mechanism-steps {
+            margin: 25px 0;
+        }
+        
+        .step {
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .initiation {
+            border-left: 5px solid #ff5252;
+            background: linear-gradient(to right, #fff5f5, #ffffff);
+        }
+        
+        .propagation {
+            border-left: 5px solid #4caf50;
+            background: linear-gradient(to right, #f1f8e9, #ffffff);
+        }
+        
+        .termination {
+            border-left: 5px solid #ff9800;
+            background: linear-gradient(to right, #fff3e0, #ffffff);
+        }
+        
+        .step-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed #ddd;
+        }
+        
+        .step-number {
+            background: #333;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .step-header h4 {
+            margin: 0;
+            flex-grow: 1;
+            color: #2c3e50;
+        }
+        
+        .step-requirement {
+            background: #e3f2fd;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            color: #1565c0;
+        }
+        
+        .chemical-equation {
+            font-family: 'Cambria', 'Times New Roman', serif;
+            font-size: 1.3em;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin: 15px 0;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .chemical-equation.small {
+            font-size: 1.1em;
+            padding: 10px;
+            margin: 8px 0;
+        }
+        
+        .radical {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+        
+        .molecule {
+            color: #1976d2;
+            font-weight: bold;
+        }
+        
+        .energy {
+            color: #ff9800;
+            font-weight: bold;
+        }
+        
+        .arrow {
+            color: #7b1fa2;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        
+        .plus {
+            margin: 0 5px;
+        }
+        
+        .step-description {
+            background: #f5f5f5;
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 4px solid #78909c;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+        
+        .propagation-cycle {
+            background: #f1f8e9;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border: 1px solid #c5e1a5;
+        }
+        
+        .termination-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .termination-options .option {
+            flex: 1;
+            min-width: 250px;
+            background: #fff3e0;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ffcc80;
+        }
+        
+        .step-image {
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 2px dashed #bdbdbd;
+        }
+        
+        .image-placeholder {
+            color: #757575;
+        }
+        
+        .key-point {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .termination-options {
+                flex-direction: column;
+            }
+            
+            .chemical-equation {
+                font-size: 1.1em;
+                overflow-x: auto;
+            }
+        }
+    </style>
 </div>
             
             <div class="card">
