@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Química Orgánica: Mecanismos y Quiralidad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad: true});</script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding: 30px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin: 40px 0 20px;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: #2980b9;
+            margin: 25px 0 15px;
+            font-size: 1.4rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #ecf0f1;
+        }
+        
+        .index {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+            margin-bottom: 30px;
+        }
+        
+        .index ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            list-style: none;
+        }
+        
+        .index li {
+            background: white;
+            padding: 10px 15px;
+            border-radius: 25px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .index li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+        }
+        
+        .index a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eaeaea;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .comparison-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .comparison-table tr:hover {
+            background: #f1f8ff;
+        }
+        
+        .code-block {
+            background: #2d3a4b;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        
+        .quiralidad-ejemplo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin: 25px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border: 2px dashed #3498db;
+        }
+        
+        .mano {
+            font-size: 1.5rem;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+        
+        .espejo {
+            font-size: 2rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.7; }
+            50% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+        
+        .resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .resource-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+        }
+        
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .index ul {
+                flex-direction: column;
+            }
+            
+            .quiralidad-ejemplo {
+                flex-direction: column;
+            }
+            
+            .resources {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-flask"></i> Química Orgánica: Mecanismos y Quiralidad</h1>
+            <p class="tagline">Una guía visual para universitarios</p>
+        </header>
+
+        <div class="index">
+            <h2><i class="fas fa-list-ol"></i> Índice Interactivo</h2>
+            <ul>
+                <li><a href="#idioma"><i class="fas fa-language"></i> La Química como Idioma</a></li>
+                <li><a href="#mecanismos"><i class="fas fa-cogs"></i> Mecanismos de Reacción</a></li>
+                <li><a href="#quiralidad"><i class="fas fa-hands"></i> Quiralidad y Estereoquímica</a></li>
+                <li><a href="#orbitales"><i class="fas fa-atom"></i> Orbitales y Reactividad</a></li>
+                <li><a href="#regioquimica"><i class="fas fa-project-diagram"></i> Regioquímica</a></li>
+                <li><a href="#esquema"><i class="fas fa-brain"></i> Esquema Mental</a></li>
+                <li><a href="#recursos"><i class="fas fa-book"></i> Recursos de Estudio</a></li>
+            </ul>
+        </div>
+
+        <section id="idioma">
+            <h2><i class="fas fa-language"></i> La Química como Idioma</h2>
+            <p><strong>Analogía gramatical</strong> para entender la organización:</p>
+            
+            <div class="card">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Componente Lingüístico</th>
+                            <th>Equivalente en Química Orgánica</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Vocabulario</strong></td>
+                            <td>Reacciones específicas</td>
+                            <td>Halogenación, sustitución, adición</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gramática</strong></td>
+                            <td>Mecanismos de reacción</td>
+                            <td>Radicales libres, iónicos, pasos elementales</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Oraciones</strong></td>
+                            <td>Síntesis orgánicas</td>
+                            <td>Secuencia lógica de reacciones</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ortografía</strong></td>
+                            <td>Estereoquímica y quiralidad</td>
+                            <td>Configuraciones R/S, enantiómeros</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Reglas de estilo</strong></td>
+                            <td>Regioquímica y selectividad</td>
+                            <td>Markovnikov vs anti-Markovnikov</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="mecanismos">
+            <h2><i class="fas fa-cogs"></i> Mecanismos de Reacción</h2>
+            
+            <div class="card">
+                <h3>Diagrama de Energía de Reacción</h3>
+                <div class="mermaid">
+                    graph LR
+                        A[Reactivos] --> B[Estado de Transición];
+                        B --> C[Intermediario];
+                        C --> D[Estado de Transición 2];
+                        D --> E[Productos];
+                        
+                        A -- Energía de Activación Ea --> B;
+                        A -- ΔH° --> E;
+                        
+                        style B fill:#ff9999;
+                        style D fill:#ff9999;
+                        style C fill:#99ff99;
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Reacción en Cadena por Radicales Libres</h3>
+                <div class="code-block">
+// Analogía de programación
+function reaccionRadicales(reactivo, iniciador) {
+    // PASO 1: INICIACIÓN
+    let radicales = iniciacion(iniciador); // hν o calor
+    
+    // PASO 2: PROPAGACIÓN (ciclo)
+    while (hayReactivo(reactivo)) {
+        let producto = propagacion(radicales, reactivo);
+        radicales = regenerarRadical(producto);
+    }
+    
+    // PASO 3: TERMINACIÓN
+    terminacion(radicales);
+    return productos;
+}
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Ficha Comparativa: Cloración vs Bromación</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Cloración del Propano</th>
+                            <th>Bromación del Propano</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>ΔH° paso 1</strong></td>
+                            <td>-4 kJ/mol (exotérmico)</td>
+                            <td>+67 kJ/mol (endotérmico)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Selectividad</strong></td>
+                            <td>Baja (4.5:1)</td>
+                            <td>Alta (97:1)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Estado transición</strong></td>
+                            <td>Parecido a reactivos</td>
+                            <td>Parecido a productos</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Producto mayoritario</strong></td>
+                            <td>2-cloropropano (60%)</td>
+                            <td>2-bromopropano (97%)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Postulado Hammond</strong></td>
+                            <td>Exotérmico → TS temprano</td>
+                            <td>Endotérmico → TS tardío</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="quiralidad">
+            <h2><i class="fas fa-hands"></i> Quiralidad y Estereoquímica</h2>
+            
+            <div class="card">
+                <h3>Analogía de las Manos</h3>
+                <div class="quiralidad-ejemplo">
+                    <div class="mano izquierda">👈 Mano izquierda</div>
+                    <div class="espejo">🪞</div>
+                    <div class="mano derecha">👉 Mano derecha</div>
+                </div>
+                <p><em>Las manos son imágenes especulares no superponibles, igual que los enantiómeros.</em></p>
+            </div>
+            
+            <div class="card">
+                <h3>Determinación de Configuración R/S</h3>
+                <p><strong>Algoritmo visual:</strong></p>
+                <ol>
+                    <li><strong>Prioridad</strong> (↑ número atómico)</li>
+                    <li><strong>Orientar</strong> (H hacia atrás)</li>
+                    <li><strong>Girar</strong> (1→2→3)</li>
+                    <li><strong>Clasificar</strong> (horario=R, antihorario=S)</li>
+                </ol>
+                
+                <h4>Ejemplo interactivo:</h4>
+                <div class="code-block">
+    Cl
+     |
+H — C* — CH₂CH₃
+     |
+    Br
+
+Prioridades: 1. Br, 2. Cl, 3. CH₂CH₃, 4. H
+Giro: Br → Cl → CH₂CH₃ = Antihorario
+Configuración: S
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Proyecciones de Fischer</h3>
+                <div class="code-block">
+    COOH           COOH
+     |              |
+  H — C* — NH₂  vs  H — C* — H
+     |              |
+    CH₃            NH₂
+    
+    L-Alanina       No natural
+    (S)             (R)
+                </div>
+            </div>
+        </section>
+
+        <section id="orbitales">
+            <h2><i class="fas fa-atom"></i> Orbitales Moleculares</h2>
+            
+            <div class="card">
+                <h3>Representación Visual HOMO/LUMO</h3>
+                <div class="code-block">
+ADICIÓN ELECTROFÍLICA:
+    
+    HOMO (Alqueno)      LUMO (Electrófilo)
+    [π] electrones       [vacío]
+        ↑                    ↑
+    Donador electrones  Aceptor electrones
+    
+    INTERACCIÓN: HOMO → LUMO
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Tabla de Interacciones Orbitales</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Reacción Tipo</th>
+                            <th>HOMO (Donador)</th>
+                            <th>LUMO (Aceptor)</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Adición electrofílica</td>
+                            <td>π (alqueno)</td>
+                            <td>σ* o vacío (H⁺, Br⁺)</td>
+                            <td>HBr + propeno</td>
+                        </tr>
+                        <tr>
+                            <td>Adición nucleofílica</td>
+                            <td>par libre (OH⁻)</td>
+                            <td>π* (carbonilo)</td>
+                            <td>Nucleófilo + aldehído</td>
+                        </tr>
+                        <tr>
+                            <td>Sustitución nucleofílica</td>
+                            <td>par libre</td>
+                            <td>σ* (C-X)</td>
+                            <td>OH⁻ + CH₃Br</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="regioquimica">
+            <h2><i class="fas fa-project-diagram"></i> Regioquímica</h2>
+            
+            <div class="card">
+                <h3>Markovnikov vs Anti-Markovnikov</h3>
+                <div class="mermaid">
+flowchart TD
+    A[Adición a Alqueno Asimétrico] --> B{¿Condiciones?};
+    
+    B -->|Sin peróxidos| C[Regla de Markovnikov];
+    B -->|Con peróxidos| D[Anti-Markovnikov];
+    
+    C --> E[Carbocatión más estable];
+    C --> F[Ejemplo: HBr → 2-bromopropano];
+    
+    D --> G[Radical más estable];
+    D --> H[Ejemplo: HBr/peróxidos → 1-bromopropano];
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Estabilidad de Intermediarios</h3>
+                <div class="code-block">
+CARBOCATIONES: 3° > 2° > 1° > metilo
+    Estabilización: Hiperconjugación, resonancia
+
+RADICALES: 3° > 2° > 1° > metilo
+    Estabilización: Sustituyentes alquilo
+
+CARBANIONES: metilo > 1° > 2° > 3°
+    Desestabilización: Grupos dadores de electrones
+                </div>
+            </div>
+        </section>
+
+        <section id="esquema">
+            <h2><i class="fas fa-brain"></i> Esquema Mental Integrador</h2>
+            <div class="card">
+                <div class="mermaid">
+mindmap
+  root((Química Orgánica))
+    
+    Mecanismos
+      :Gramática molecular:
+      Radicalarios
+        Iniciación
+        Propagación
+        Terminación
+      Iónicos
+        Electrófilos
+        Nucleófilos
+      Energética
+        ΔG‡
+        Ea
+        Diagramas
+    
+    Estereoquímica
+      :Ortografía espacial:
+      Quiralidad
+        R/S
+        Enantiómeros
+      Diastereómeros
+        cis/trans
+        meso
+      Proyecciones
+        Fischer
+        Newman
+    
+    Reactividad
+      :Vocabulario de reacciones:
+      Orbitales
+        HOMO/LUMO
+        Interacciones
+      Regioquímica
+        Markovnikov
+        Anti-Markovnikov
+      Intermediarios
+        Carbocationes
+        Radicales
+        Carbaniones
+    
+    Síntesis
+      :Redacción molecular:
+      Secuencia
+        Pasos lógicos
+        Rendimiento
+      Control
+        Estereoquímico
+        Regioquímico
+      Optimización
+        Cinética
+        Termodinámica
+                </div>
+            </div>
+        </section>
+
+        <section id="recursos">
+            <h2><i class="fas fa-book"></i> Recursos de Estudio</h2>
+            
+            <div class="resources">
+                <div class="resource-card">
+                    <h3><i class="fas fa-paint-brush"></i> Herramientas Visuales</h3>
+                    <ul>
+                        <li><strong>MolView</strong>: Modelos moleculares 3D</li>
+                        <li><strong>ChemDoodle</strong>: Dibujo de estructuras</li>
+                        <li><strong>PhET Simulations</strong>: Simulaciones interactivas</li>
+                    </ul>
+                </div>
+                
+                <div class="resource-card">
+                    <h3><i class="fas fa-code"></i> Ejercicios Prácticos</h3>
+                    <div class="code-block" style="background:#1a202c; font-size:0.9rem;">
+// Identificar centros quirales
+const moleculas = [
+    "CH3CHClCH2CH3",      // 2-clorobutano
+    "CH3CHOHCOOH",        // Ácido láctico
+    "C6H5CHClCH3"         // 1-fenil-1-cloroetano
+];
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <h3><i class="fas fa-lightbulb"></i> Consejos para Exámenes</h3>
+                    <ul>
+                        <li>Dibujar TODOS los pasos de mecanismos</li>
+                        <li>Usar modelos moleculares si es permitido</li>
+                        <li>Identificar primero el tipo de reacción</li>
+                        <li>Pensar retrosintéticamente</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Cómo Usar Esta Guía</h3>
+                <ol>
+                    <li><strong>Estudio Diario:</strong> Revisa una sección al día</li>
+                    <li><strong>Práctica Activa:</strong> Dibuja mecanismos sin mirar</li>
+                    <li><strong>Grupos de Estudio:</strong> Explica conceptos a compañeros</li>
+                    <li><strong>Aplicación:</strong> Relaciona con ejemplos biológicos/farmacéuticos</li>
+                </ol>
+            </div>
+            
+            <div class="card">
+                <h3>Referencias</h3>
+                <p>Wade, L. G. <em>Química Orgánica</em>. 7ª ed.</p>
+                <p>Material cubierto: Halogenación radicalaria, estereoquímica, mecanismos</p>
+                <p>Páginas analizadas: 127-204</p>
+            </div>
+        </section>
+        
+        <footer>
+            <p>🎓 <strong>Recuerda:</strong> La química orgánica es un lenguaje. ¡Aprende la gramática y podrás crear moléculas!</p>
+            
+            <div class="badges">
+                <span class="badge" style="background:#28a745; color:white;">Repositorio Activo</span>
+                <span class="badge" style="background:#007bff; color:white;">Licencia CC BY 4.0</span>
+                <span class="badge" style="background:#6f42c1; color:white;">Nivel Universitario</span>
+            </div>
+            
+            <p><em>¿Encontraste un error o tienes sugerencias? ¡Abre un issue o contribuye al repositorio!</em></p>
+        </footer>
+    </div>
+
+    <script>
+        // Suavizar el desplazamiento a los anclajes
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Resaltar la sección actual en el índice
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const indexLinks = document.querySelectorAll('.index a');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if(window.scrollY >= (sectionTop - 100)) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            indexLinks.forEach(link => {
+                link.style.fontWeight = 'normal';
+                link.style.color = '#2c3e50';
+                
+                if(link.getAttribute('href') === `#${currentSection}`) {
+                    link.style.fontWeight = 'bold';
+                    link.style.color = '#e74c3c';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
