@@ -1271,38 +1271,1028 @@
     </style>
 </div>
             
-            <div class="card">
-                <h3>Proyecciones de Fischer</h3>
-                <div class="code-block">
-    COOH           COOH
-     |              |
-  H — C* — NH₂  vs  H — C* — H
-     |              |
-    CH₃            NH₂
+<div class="card">
+    <h3><i class="fas fa-crosshairs"></i> Proyecciones de Fischer</h3>
     
-    L-Alanina       No natural
-    (S)             (R)
+    <div class="fischer-projections-guide">
+        <div class="fischer-intro">
+            <p>Las <strong>proyecciones de Fischer</strong> son representaciones bidimensionales de moléculas quirales que muestran la configuración absoluta de forma simplificada.</p>
+        </div>
+        
+        <div class="fischer-rules">
+            <h4><i class="fas fa-ruler-combined"></i> Reglas Básicas:</h4>
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <div class="rule-icon">✚</div>
+                    <h5>La Cruz</h5>
+                    <p>La intersección representa el <strong>carbono quiral</strong> (no se dibuja).</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon">↔</div>
+                    <h5>Líneas Horizontales</h5>
+                    <p>Se proyectan <strong>hacia el frente</strong> (como cuñas).</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon">↕</div>
+                    <h5>Líneas Verticales</h5>
+                    <p>Se proyectan <strong>hacia atrás</strong> (como líneas punteadas).</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon">↻</div>
+                    <h5>Rotación Permitida</h5>
+                    <p>Solo se puede girar <strong>180°</strong> en el plano del papel.</p>
                 </div>
             </div>
+        </div>
+        
+        <div class="fischer-examples">
+            <h4><i class="fas fa-vial"></i> Ejemplo: Alanina</h4>
+            
+            <div class="example-comparison">
+                <div class="fischer-example">
+                    <div class="example-header">
+                        <h5>L-Alanina (Natural)</h5>
+                        <span class="configuration-badge s-badge">(S)</span>
+                    </div>
+                    
+                    <div class="fischer-diagram">
+                        <div class="cross-lines">
+                            <div class="horizontal-line"></div>
+                            <div class="vertical-line"></div>
+                        </div>
+                        <div class="groups">
+                            <div class="group top">COOH</div>
+                            <div class="group right">NH₂</div>
+                            <div class="group bottom">CH₃</div>
+                            <div class="group left">H</div>
+                        </div>
+                        <div class="chiral-center">
+                            <div class="carbon-dot"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="molecule-3d">
+                        <div class="image-placeholder">
+                            <i class="fas fa-cube" style="color: #3F51B5; font-size: 2em;"></i>
+                            <p>Imagen: Modelo 3D de L-Alanina</p>
+                        </div>
+                    </div>
+                    
+                    <div class="properties">
+                        <p><strong>Configuración:</strong> (S)-2-aminopropanoico</p>
+                        <p><strong>Actividad óptica:</strong> Levógira (-)</p>
+                        <p><strong>En biología:</strong> Aminoácido natural en proteínas</p>
+                    </div>
+                </div>
+                
+                <div class="comparison-arrow">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                
+                <div class="fischer-example">
+                    <div class="example-header">
+                        <h5>D-Alanina (No natural)</h5>
+                        <span class="configuration-badge r-badge">(R)</span>
+                    </div>
+                    
+                    <div class="fischer-diagram">
+                        <div class="cross-lines">
+                            <div class="horizontal-line"></div>
+                            <div class="vertical-line"></div>
+                        </div>
+                        <div class="groups">
+                            <div class="group top">COOH</div>
+                            <div class="group right">H</div>
+                            <div class="group bottom">CH₃</div>
+                            <div class="group left">NH₂</div>
+                        </div>
+                        <div class="chiral-center">
+                            <div class="carbon-dot"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="molecule-3d">
+                        <div class="image-placeholder">
+                            <i class="fas fa-cube" style="color: #E91E63; font-size: 2em;"></i>
+                            <p>Imagen: Modelo 3D de D-Alanina</p>
+                        </div>
+                    </div>
+                    
+                    <div class="properties">
+                        <p><strong>Configuración:</strong> (R)-2-aminopropanoico</p>
+                        <p><strong>Actividad óptica:</strong> Dextrógira (+)</p>
+                        <p><strong>En biología:</strong> No se metaboliza</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="fischer-tips">
+            <h4><i class="fas fa-lightbulb"></i> Consejos Prácticos:</h4>
+            <div class="tips-grid">
+                <div class="tip">
+                    <i class="fas fa-bow-tie"></i>
+                    <p>Se le llama "convención de la corbata de moño"</p>
+                </div>
+                <div class="tip">
+                    <i class="fas fa-chain-broken"></i>
+                    <p>La cadena carbonada va en la línea vertical</p>
+                </div>
+                <div class="tip">
+                    <i class="fas fa-ban"></i>
+                    <p>¡NO girar 90°! Cambiaría la configuración</p>
+                </div>
+                <div class="tip">
+                    <i class="fas fa-exchange-alt"></i>
+                    <p>Intercambiar 2 grupos invierte R/S</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        .fischer-projections-guide {
+            margin: 25px 0;
+        }
+        
+        .fischer-intro {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #2196F3;
+        }
+        
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .rule-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            transition: transform 0.3s;
+        }
+        
+        .rule-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+        
+        .rule-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: #2196F3;
+        }
+        
+        .rule-card h5 {
+            margin: 10px 0;
+            color: #2c3e50;
+        }
+        
+        .example-comparison {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 40px;
+            margin: 30px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+        
+        .fischer-example {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .example-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .example-header h5 {
+            margin: 0;
+            color: #2c3e50;
+        }
+        
+        .configuration-badge {
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .s-badge {
+            background: #ffebee;
+            color: #c62828;
+            border: 1px solid #ef9a9a;
+        }
+        
+        .r-badge {
+            background: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #a5d6a7;
+        }
+        
+        .fischer-diagram {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            background: #f5f5f5;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+        }
+        
+        .cross-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .horizontal-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #333;
+            transform: translateY(-50%);
+        }
+        
+        .vertical-line {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 3px;
+            height: 100%;
+            background: #666;
+            transform: translateX(-50%);
+        }
+        
+        .groups {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .group {
+            position: absolute;
+            padding: 8px 12px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-weight: bold;
+            font-size: 0.9em;
+            text-align: center;
+            min-width: 50px;
+        }
+        
+        .group.top {
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #bbdefb;
+            border: 1px solid #64b5f6;
+        }
+        
+        .group.right {
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            background: #c8e6c9;
+            border: 1px solid #81c784;
+        }
+        
+        .group.bottom {
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffecb3;
+            border: 1px solid #ffd54f;
+        }
+        
+        .group.left {
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            background: #f8bbd0;
+            border: 1px solid #f48fb1;
+        }
+        
+        .chiral-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .carbon-dot {
+            width: 20px;
+            height: 20px;
+            background: #333;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px #333;
+        }
+        
+        .comparison-arrow {
+            align-self: center;
+            font-size: 2em;
+            color: #7b1fa2;
+        }
+        
+        .molecule-3d {
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .image-placeholder {
+            padding: 30px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            border: 2px dashed #bdbdbd;
+        }
+        
+        .properties {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .fischer-tips {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+        }
+        
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .tip {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+            border-left: 4px solid #FF9800;
+        }
+        
+        .tip i {
+            font-size: 1.5em;
+            color: #FF9800;
+        }
+        
+        @media (max-width: 992px) {
+            .example-comparison {
+                flex-direction: column;
+            }
+            
+            .comparison-arrow {
+                transform: rotate(90deg);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .rules-grid, .tips-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</div>
         </section>
 
         <section id="orbitales">
             <h2><i class="fas fa-atom"></i> Orbitales Moleculares</h2>
             
-            <div class="card">
-                <h3>Representación Visual HOMO/LUMO</h3>
-                <div class="code-block">
-ADICIÓN ELECTROFÍLICA:
+<div class="card">
+    <h3><i class="fas fa-satellite-dish"></i> Representación Visual HOMO/LUMO</h3>
     
-    HOMO (Alqueno)      LUMO (Electrófilo)
-    [π] electrones       [vacío]
-        ↑                    ↑
-    Donador electrones  Aceptor electrones
-    
-    INTERACCIÓN: HOMO → LUMO
+    <div class="homo-lumo-guide">
+        <div class="concept-explanation">
+            <h4><i class="fas fa-brain"></i> ¿Qué son HOMO y LUMO?</h4>
+            <div class="definition-cards">
+                <div class="definition-card homo-def">
+                    <div class="definition-header">
+                        <span class="acronym">HOMO</span>
+                        <span class="full-name">Highest Occupied Molecular Orbital</span>
+                    </div>
+                    <div class="definition-content">
+                        <i class="fas fa-arrow-up" style="color: #4CAF50;"></i>
+                        <h5>Orbital Molecular Ocupado Más Alto</h5>
+                        <ul>
+                            <li>Contiene los electrones más energéticos</li>
+                            <li>Es el <strong>donador</strong> de electrones</li>
+                            <li>Determina el comportamiento <strong>nucleofílico</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="definition-card lumo-def">
+                    <div class="definition-header">
+                        <span class="acronym">LUMO</span>
+                        <span class="full-name">Lowest Unoccupied Molecular Orbital</span>
+                    </div>
+                    <div class="definition-content">
+                        <i class="fas fa-arrow-down" style="color: #F44336;"></i>
+                        <h5>Orbital Molecular Desocupado Más Bajo</h5>
+                        <ul>
+                            <li>Está vacío o parcialmente vacío</li>
+                            <li>Es el <strong>aceptor</strong> de electrones</li>
+                            <li>Determina el comportamiento <strong>electrofílico</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="interaction-demo">
+            <h4><i class="fas fa-handshake"></i> Interacción HOMO-LUMO</h4>
+            
+            <div class="demo-container">
+                <div class="molecule-part">
+                    <div class="orbital-diagram homo-orbital">
+                        <div class="orbital-header">
+                            <h5>ALQUENO</h5>
+                            <span class="orbital-type">HOMO (Orbital π)</span>
+                        </div>
+                        <div class="orbital-visual">
+                            <div class="orbital-shape">
+                                <div class="orbital-lobe top"></div>
+                                <div class="orbital-lobe bottom"></div>
+                                <div class="electron-pair">
+                                    <div class="electron spin-up">↑</div>
+                                    <div class="electron spin-down">↓</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="orbital-properties">
+                            <p><strong>Electrones:</strong> 2 (par enlazante)</p>
+                            <p><strong>Energía:</strong> Alta</p>
+                            <p><strong>Función:</strong> Donador</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="interaction-arrow">
+                    <div class="arrow-container">
+                        <div class="electron-transfer">
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                            <span>Transferencia de electrones</span>
+                        </div>
+                        <div class="interaction-energy">
+                            <i class="fas fa-bolt"></i>
+                            <span>ΔE = E<sub>LUMO</sub> - E<sub>HOMO</sub></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="molecule-part">
+                    <div class="orbital-diagram lumo-orbital">
+                        <div class="orbital-header">
+                            <h5>ELECTRÓFILO (H⁺)</h5>
+                            <span class="orbital-type">LUMO (Orbital σ*)</span>
+                        </div>
+                        <div class="orbital-visual">
+                            <div class="orbital-shape empty">
+                                <div class="orbital-lobe"></div>
+                                <div class="empty-state">
+                                    <i class="fas fa-box-open"></i>
+                                    <span>VACÍO</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="orbital-properties">
+                            <p><strong>Electrones:</strong> 0 (vacío)</p>
+                            <p><strong>Energía:</strong> Muy alta</p>
+                            <p><strong>Función:</strong> Aceptor</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             
+            <div class="image-placeholder large">
+                <i class="fas fa-project-diagram" style="color: #9C27B0; font-size: 2.5em;"></i>
+                <p>Imagen: Diagrama de interacción HOMO-LUMO en adición electrofílica</p>
+            </div>
+        </div>
+        
+        <div class="applications-examples">
+            <h4><i class="fas fa-flask"></i> Aplicaciones en Reacciones</h4>
+            
+            <div class="reaction-examples">
+                <div class="reaction-card">
+                    <div class="reaction-header">
+                        <h5><i class="fas fa-plus-circle" style="color: #4CAF50;"></i> Adición Electrofílica</h5>
+                        <span class="reaction-type">HBr + Alqueno</span>
+                    </div>
+                    <div class="reaction-mechanism">
+                        <div class="reactants">
+                            <span class="molecule">CH₂=CH₂</span>
+                            <span class="plus"> + </span>
+                            <span class="molecule">HBr</span>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="products">
+                            <span class="molecule">CH₃-CH₂Br</span>
+                        </div>
+                    </div>
+                    <div class="homo-lumo-role">
+                        <p><strong>HOMO:</strong> π del alqueno (donador)</p>
+                        <p><strong>LUMO:</strong> σ* de H-Br (aceptor)</p>
+                    </div>
+                    <div class="reaction-image">
+                        <div class="image-placeholder small">
+                            <p>Imagen: Mecanismo de adición electrofílica</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reaction-card">
+                    <div class="reaction-header">
+                        <h5><i class="fas fa-exchange-alt" style="color: #2196F3;"></i> Sustitución Nucleofílica</h5>
+                        <span class="reaction-type">OH⁻ + CH₃Br</span>
+                    </div>
+                    <div class="reaction-mechanism">
+                        <div class="reactants">
+                            <span class="molecule">CH₃Br</span>
+                            <span class="plus"> + </span>
+                            <span class="molecule">OH⁻</span>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="products">
+                            <span class="molecule">CH₃OH</span>
+                            <span class="plus"> + </span>
+                            <span class="molecule">Br⁻</span>
+                        </div>
+                    </div>
+                    <div class="homo-lumo-role">
+                        <p><strong>HOMO:</strong> Par libre de OH⁻ (donador)</p>
+                        <p><strong>LUMO:</strong> σ* de C-Br (aceptor)</p>
+                    </div>
+                    <div class="reaction-image">
+                        <div class="image-placeholder small">
+                            <p>Imagen: Mecanismo S<sub>N</sub>2</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reaction-card">
+                    <div class="reaction-header">
+                        <h5><i class="fas fa-atom" style="color: #FF9800;"></i> Cicloadición [4+2]</h5>
+                        <span class="reaction-type">Reacción de Diels-Alder</span>
+                    </div>
+                    <div class="reaction-mechanism">
+                        <div class="reactants">
+                            <span class="molecule">Dieno</span>
+                            <span class="plus"> + </span>
+                            <span class="molecule">Dienófilo</span>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="products">
+                            <span class="molecule">Ciclohexeno</span>
+                        </div>
+                    </div>
+                    <div class="homo-lumo-role">
+                        <p><strong>HOMO:</strong> π del dieno</p>
+                        <p><strong>LUMO:</strong> π* del dienófilo</p>
+                    </div>
+                    <div class="reaction-image">
+                        <div class="image-placeholder small">
+                            <p>Imagen: Diagrama orbital de Diels-Alder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="energy-diagram">
+            <h4><i class="fas fa-chart-line"></i> Diagrama de Energía Orbital</h4>
+            
+            <div class="diagram-container">
+                <div class="energy-levels">
+                    <div class="energy-level antibonding">
+                        <div class="level-label">σ* (LUMO)</div>
+                        <div class="level-line"></div>
+                        <div class="level-energy">Energía Alta</div>
+                    </div>
+                    
+                    <div class="energy-level nonbonding">
+                        <div class="level-label">n (par libre)</div>
+                        <div class="level-line"></div>
+                        <div class="level-energy">Energía Media</div>
+                    </div>
+                    
+                    <div class="energy-level bonding">
+                        <div class="level-label">π (HOMO)</div>
+                        <div class="level-line"></div>
+                        <div class="level-energy">Energía Baja</div>
+                    </div>
+                    
+                    <div class="energy-level sigma">
+                        <div class="level-label">σ</div>
+                        <div class="level-line"></div>
+                        <div class="level-energy">Energía Muy Baja</div>
+                    </div>
+                </div>
+                
+                <div class="interaction-illustration">
+                    <div class="electron-jump">
+                        <div class="jump-arrow"></div>
+                        <div class="jump-label">ΔE = Brecha energética</div>
+                    </div>
+                    <div class="selection-rules">
+                        <p><strong>Reglas de selección:</strong></p>
+                        <ul>
+                            <li>Simetría orbital similar</li>
+                            <li>Solapamiento efectivo</li>
+                            <li>ΔE pequeña (favorecida)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="image-placeholder">
+                <i class="fas fa-mountain" style="color: #795548; font-size: 2em;"></i>
+                <p>Imagen: Diagrama completo de niveles energéticos orbitales</p>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        .homo-lumo-guide {
+            margin: 25px 0;
+        }
+        
+        .definition-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin: 25px 0;
+        }
+        
+        .definition-card {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .homo-def {
+            background: linear-gradient(135deg, #e8f5e9, #ffffff);
+            border-left: 5px solid #4CAF50;
+        }
+        
+        .lumo-def {
+            background: linear-gradient(135deg, #ffebee, #ffffff);
+            border-left: 5px solid #F44336;
+        }
+        
+        .definition-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px dashed #ddd;
+        }
+        
+        .acronym {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .homo-def .acronym {
+            color: #4CAF50;
+        }
+        
+        .lumo-def .acronym {
+            color: #F44336;
+        }
+        
+        .full-name {
+            font-size: 0.9em;
+            color: #666;
+            flex-grow: 1;
+        }
+        
+        .definition-content h5 {
+            color: #2c3e50;
+            margin: 15px 0;
+        }
+        
+        .definition-content ul {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+        
+        .definition-content li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        
+        .demo-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+        
+        .molecule-part {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .orbital-diagram {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .homo-orbital {
+            border-top: 5px solid #4CAF50;
+        }
+        
+        .lumo-orbital {
+            border-top: 5px solid #F44336;
+        }
+        
+        .orbital-header {
+            margin-bottom: 25px;
+        }
+        
+        .orbital-header h5 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+        }
+        
+        .orbital-type {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        
+        .homo-orbital .orbital-type {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .lumo-orbital .orbital-type {
+            background: #ffebee;
+            color: #c62828;
+        }
+        
+        .orbital-visual {
+            margin: 25px 0;
+            position: relative;
+            height: 150px;
+        }
+        
+        .orbital-shape {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+        }
+        
+        .orbital-lobe {
+            position: absolute;
+            width: 100px;
+            height: 60px;
+            border: 3px solid;
+            border-radius: 50%;
+        }
+        
+        .homo-orbital .orbital-lobe {
+            border-color: #4CAF50;
+        }
+        
+        .homo-orbital .orbital-lobe.top {
+            top: 10px;
+            left: 10px;
+        }
+        
+        .homo-orbital .orbital-lobe.bottom {
+            bottom: 10px;
+            left: 10px;
+            transform: rotate(180deg);
+        }
+        
+        .lumo-orbital .orbital-lobe {
+            border-color: #F44336;
+            border-style: dashed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .electron-pair {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            gap: 20px;
+        }
+        
+        .electron {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .electron.spin-up {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .electron.spin-down {
+            background: #2e7d32;
+            color: white;
+        }
+        
+        .empty-state {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #F44336;
+        }
+        
+        .empty-state i {
+            font-size: 2em;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .orbital-properties {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .orbital-properties p {
+            margin: 8px 0;
+            font-size: 0.95em;
+        }
+        
+        .interaction-arrow {
+            flex: 0 0 auto;
+        }
+        
+        .arrow-container {
+            text-align: center;
+        }
+        
+        .electron-transfer {
+            font-size: 1.5em;
+            color: #9C27B0;
+            margin-bottom: 20px;
+        }
+        
+        .electron-transfer i {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .interaction-energy {
+            background: #fff3e0;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 1px solid #ffb74d;
+            color: #ef6c00;
+            font-weight: bold;
+        }
+        
+        .image-placeholder {
+            text-align: center;
+            padding: 30px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            border: 2px dashed #bdbdbd;
+            margin: 25px 0;
+        }
+        
+        .image-placeholder.large {
+            padding: 40px;
+        }
+        
+        .image-placeholder.small {
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .reaction-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .reaction-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-top: 4px solid;
+        }
+        
+        .reaction-card:nth-child(1) {
+            border-color: #4CAF50;
+        }
+        
+        .reaction-card:nth-child(2) {
+            border-color: #2196F3;
+        }
+        
+        .reaction-card:nth-child(3) {
+            border-color: #FF9800;
+        }
+        
+        .reaction-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .reaction-header h5 {
+            margin: 0;
+            color: #2c3e50;
+        }
+        
+        .reaction-type {
+            font-size: 0.9em;
+            background: #f5f5f5;
+            padding: 5px 10px;
+            border-radius: 4px;
+            color: #666;
+        }
+        
+        .reaction-mechanism {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            font-family: 'Cambria', serif;
+            font-size: 1.1em;
+        }
+        
+        .arrow {
+            color: #7b1fa2;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .molecule
+        
             <div class="card">
                 <h3>Tabla de Interacciones Orbitales</h3>
                 <table class="comparison-table">
